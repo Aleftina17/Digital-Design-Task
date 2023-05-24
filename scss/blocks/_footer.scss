@@ -1,0 +1,84 @@
+.footer {
+    margin-top: 40px;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding: 60px 0;
+    }
+
+    &__info {
+        &--logo {
+            height: 95px;
+            width: 108px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &--text {
+            max-width: 250px;
+            margin-top: 24px;
+            font-size: 16px;
+        }
+    }
+
+    &__lists {
+        display: flex;
+        gap: 65px;
+    }
+
+    &__list {
+        font-size: 22px;
+        font-weight: $fw-sb;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        &--title {
+            margin-bottom: 65px;
+            white-space: nowrap;
+        }
+
+        &--item {
+            font-size: 16px;
+            font-weight: $fw-reg;
+        }
+    }
+
+    &__contact {
+        &--item {
+            position: relative;
+            padding-left: 30px;
+
+            &::before {
+                position: absolute;
+                content: "";
+                background-repeat: no-repeat;
+                background-size: contain;
+                top: 0;
+                left: 0;
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+}
+
+#mail {
+    &::before {
+        background-image: url("../img/iocns/mail-ico.png");
+    }
+}
+
+#telephone {
+    &::before {
+        background-image: url("../img/iocns/phone-ico.png");
+    }
+}
+
+#address {
+    &::before {
+        background-image: url("../img/iocns/map.png");
+    }
+}

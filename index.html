@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Design Task</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./img/iocns/teapot-ico.png"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script type="module" src="./js/cards.js" defer></script>
+    <script type="module" src="./js/date.js" defer></script>
+    <script src="./js/main.js" defer></script>
+    <script src="./js/purchase-form.js" defer></script>
+  </head>
+  <body data-theme="light">
+    <!-- Header -->
+
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <div class="nav__logo"></div>
+          <ul class="nav__list">
+            <li class="nav__list--item">
+              <a href="#anchor-plates" class="nav__list--item--link">Plates</a>
+            </li>
+            <li class="nav__list--item">
+              <a href="#anchor-teacups" class="nav__list--item--link"
+                >Teacups & Mugs</a
+              >
+            </li>
+            <li class="nav__list--item">
+              <a href="#anchor-trays" class="nav__list--item--link">Trays</a>
+            </li>
+            <li class="nav__list--item">
+              <a href="#anchor-teapots" class="nav__list--item--link"
+                >Teapots & Tea Sets</a
+              >
+            </li>
+          </ul>
+          <!-- Theme Switcher -->
+          <div class="nav__theme-switcher">
+            <input type="checkbox" id="themeToggle" class="theme-toggle" />
+            <label for="themeToggle" class="theme-toggle-label"></label>
+          </div>
+          <!-- Burger Menu -->
+          <div class="burger-menu">
+            <div class="burger-menu__icon"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+
+    <div class="mobile-nav-overlay">
+      <div class="mobile-nav">
+        <ul class="mobile-nav__list">
+          <li class="mobile-nav__list--item">
+            <a href="#anchor-plates" class="mobile-nav__list--item--link"
+              >Plates</a
+            >
+          </li>
+          <li class="mobile-nav__list--item">
+            <a href="#anchor-teacups" class="mobile-nav__list--item--link"
+              >Teacups & Mugs</a
+            >
+          </li>
+          <li class="mobile-nav__list--item">
+            <a href="#anchor-trays" class="mobile-nav__list--item--link"
+              >Trays</a
+            >
+          </li>
+          <li class="mobile-nav__list--item">
+            <a href="#anchor-teapots" class="mobile-nav__list--item--link"
+              >Teapots & Tea Sets</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Main -->
+
+    <main class="main">
+      <div class="container">
+        <!-- Section Plates -->
+        <div class="anchor" id="anchor-plates"></div>
+        <section class="section section-plates" id="plates">
+          <h2 class="section__title">Plates</h2>
+          <div class="section__content">
+            <!-- Cards -->
+            <div class="cards-wrapper" id="cardsWrapperPlates"></div>
+          </div>
+        </section>
+
+        <!-- Section Teacups -->
+        <div class="anchor" id="anchor-teacups"></div>
+        <section class="section section-teacups" id="teacups">
+          <h2 class="section__title">Teacups & Mugs</h2>
+          <div class="section__content">
+            <!-- Cards -->
+            <div class="cards-wrapper" id="cardsWrapperTeacups"></div>
+          </div>
+        </section>
+
+        <!-- Section Trays -->
+        <div class="anchor" id="anchor-trays"></div>
+        <section class="section section-teacups" id="trays">
+          <h2 class="section__title">Trays</h2>
+          <div class="section__content">
+            <!-- Cards -->
+            <div class="cards-wrapper" id="cardsWrapperTrays"></div>
+          </div>
+        </section>
+
+        <!-- Section Teapots -->
+        <div class="anchor" id="anchor-teapots"></div>
+        <section class="section section-teapots" id="teapots">
+          <h2 class="section__title">Teapots & Tea Sets</h2>
+          <div class="section__content">
+            <!-- Cards -->
+            <div class="cards-wrapper" id="cardsWrapperTeapots"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Purchase Form -->
+
+    <div class="overlay">
+      <div class="form-container">
+        <div class="form-card-info">
+          <img class="form-card-info__img" id="card-img" src="" alt="" />
+          <h4 class="form-card-info__title" id="card-title"></h4>
+        </div>
+
+        <form class="form" id="purchaseForm">
+          <div class="form__inputs">
+            <label class="form__quantity" for="quantityInput"
+              ><span class="form__quantity--title">Quantity:</span>
+              <div class="form__quantity--wrapper">
+                <button class="btn btn__number-minus" type="button">-</button>
+                <input
+                  class="form__quantity--input"
+                  type="number"
+                  id="quantityInput"
+                  min="1"
+                  value="1"
+                  required
+                />
+                <button class="btn btn__number-plus" type="button">+</button>
+              </div>
+            </label>
+
+            <div class="form__colors">
+              <span class="form__colors--title">Colors:</span>
+              <div class="form__colors--options">
+                <label for="colorWhite">
+                  <input
+                    class="form__colors--input"
+                    id="colorWhite"
+                    type="radio"
+                    name="color"
+                    value="white"
+                    required
+                    checked
+                  />
+                  <span class="form__colors--input--name">White</span>
+                </label>
+                <label for="colorGreen">
+                  <input
+                    class="form__colors--input"
+                    id="colorGreen"
+                    type="radio"
+                    name="color"
+                    value="green"
+                    required
+                  />
+                  <span class="form__colors--input--name">Green</span>
+                </label>
+                <label for="colorBlack">
+                  <input
+                    class="form__colors--input"
+                    id="colorBlack"
+                    type="radio"
+                    name="color"
+                    value="black"
+                    required
+                  />
+                  <span class="form__colors--input--name">Black</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <label class="form__comment" for="commentInput">
+            <textarea
+              id="commentInput"
+              maxlength="2000"
+              placeholder="Enter your comment"
+            ></textarea>
+          </label>
+
+          <div class="form__btns">
+            <button type="submit" class="btn btn--buy">Buy</button>
+            <button type="button" class="btn btn--close">Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal -->
+
+    <div class="overlay-modal">
+      <div class="modal">
+        <h3 class="modal__title">Thank you!</h3>
+        <p class="modal__text">Your purchase successfully completed.</p>
+        <button class="btn btn--close--modal">OK</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__info">
+            <div class="footer__info--logo"></div>
+            <div class="footer__info--text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+              alias nostrum rem tempora.
+            </div>
+          </div>
+
+          <div class="footer__lists">
+            <ul class="footer__list footer__sections">
+              <span class="footer__list--title">Sections</span>
+              <li class="footer__list--item">
+                <a href="#anchor-plates" class="footer__list--item--link"
+                  >Plates</a
+                >
+              </li>
+              <li class="footer__list--item">
+                <a href="#anchor-teacups" class="footer__list--item--link"
+                  >Teacups & Mugs</a
+                >
+              </li>
+              <li class="footer__list--item">
+                <a href="#anchor-trays" class="footer__list--item--link"
+                  >Trays</a
+                >
+              </li>
+              <li class="footer__list--item">
+                <a href="#anchor-teapots" class="footer__list--item--link"
+                  >Teapots & Tea Sets</a
+                >
+              </li>
+            </ul>
+            <ul class="footer__list footer__about">
+              <span class="footer__list--title">About Us</span>
+              <li class="footer__list--item">
+                <a href="#!" class="footer__list--item--link">Company</a>
+              </li>
+              <li class="footer__list--item">
+                <a href="#!" class="footer__list--item--link">FAQ</a>
+              </li>
+              <li class="footer__list--item">
+                <a href="#!" class="footer__list--item--link">Blog</a>
+              </li>
+              <li class="footer__list--item">
+                <a href="#!" class="footer__list--item--link">Services</a>
+              </li>
+            </ul>
+            <ul class="footer__list footer__contact">
+              <span class="footer__list--title">Contact</span>
+              <li class="footer__list--item footer__contact--item" id="mail">
+                <a
+                  href="mailto:arttable@gmail.com"
+                  class="footer__list--item--link"
+                  >arttable@gmail.com</a
+                >
+              </li>
+              <li
+                class="footer__list--item footer__contact--item"
+                id="telephone"
+              >
+                <a
+                  href="tel:arttable@gmail.com"
+                  class="footer__list--item--link"
+                  >+1 234 567 89 91</a
+                >
+              </li>
+              <li class="footer__list--item footer__contact--item" id="address">
+                <a
+                  href="http://maps.google.com/?q=Saint Petersburg, Nevsky prospect, 99"
+                  class="footer__list--item--link"
+                  >Saint Petersburg, Nevsky<br />prospect, 99</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll To Top Button -->
+    <button
+      class="btn btn--scroll-top"
+      id="scrollToTopButton"
+      onclick="scrollToTop()"
+    >
+      <img src="./img/iocns/arrow-up.svg" alt="Up" />
+    </button>
+  </body>
+</html>

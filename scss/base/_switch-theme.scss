@@ -1,0 +1,185 @@
+@import "./theme-light";
+@import "./theme-dark";
+
+//Light theme
+body[data-theme="light"] {
+  background-color: $color-bg;
+  color: $color-main;
+
+  a {
+    color: $color-main;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  .nav__logo,
+  .footer__info--logo {
+    background-image: url("../img/logo-dark.png");
+  }
+
+  .btn {
+    &--card {
+      background-color: $color-gray;
+      color: $color-white;
+
+      &:hover,
+      &:focus {
+        background-color: $color-accent;
+      }
+    }
+    &--scroll-top {
+      background-color: $color-accent;
+    }
+  }
+
+  .card {
+    background-color: $color-white;
+    box-shadow: 0px 0px 15px rgba($color-main, 0.2);
+
+    &__info--date {
+      color: $color-gray;
+    }
+  }
+
+  .footer {
+    background-color: $color-nav;
+  }
+
+  .header {
+    background-color: $color-nav;
+  }
+
+  .form-container {
+    background-color: $color-white;
+  }
+
+  .mobile-nav-overlay {
+    background-color: $color-nav;
+  }
+}
+
+//Dark theme
+body[data-theme="dark"] {
+  background-color: $color-bg-dark;
+  color: $color-main-dark;
+
+  a {
+    color: $color-main-dark;
+
+    &:hover {
+      color: $color-accent-dark;
+    }
+  }
+
+  .nav__logo,
+  .footer__info--logo {
+    background-image: url("../img/logo-light.png");
+  }
+
+  .btn {
+    &--card {
+      background-color: $color-main-dark;
+      color: $color-nav-dark;
+
+      &:hover,
+      &:focus {
+        background-color: $color-accent-dark;
+      }
+    }
+
+    &--scroll-top {
+      background-color: $color-main-dark;
+    }
+  }
+
+  .card {
+    background-color: $color-nav-dark;
+    box-shadow: 0px 0px 15px rgba($color-nav-dark, 0.2);
+
+    &__info {
+      &--date {
+        color: $color-gray;
+      }
+
+      &--title {
+        color: $color-white-dark;
+      }
+    }
+
+    &__img {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, rgb(255 255 255 / 0%) 46%, rgba(37, 47, 59, 0.63) 164%);
+        pointer-events: none;
+      }
+    }
+  }
+
+  .footer {
+    background-color: $color-nav-dark;
+  }
+
+  .header {
+    background-color: $color-nav-dark;
+  }
+
+  .form-container {
+    background-color: $color-bg-dark;
+    color: $color-white-dark;
+  }
+
+  .modal {
+    background-color: $color-bg-dark;
+    color: $color-white-dark;
+  }
+
+  .mobile-nav-overlay {
+    background-color: $color-nav-dark;
+  }
+}
+
+//Theme widget
+
+.theme-toggle {
+  display: none;
+
+  &:checked + .theme-toggle-label {
+    background-color: $color-bg;
+  }
+
+  &:checked + .theme-toggle-label::after {
+    color: $color-accent;
+    content: "\2B24";
+    transform: translateX(-20px);
+  }
+}
+
+.theme-toggle-label {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: $color-accent;
+  cursor: pointer;
+
+  &::after {
+    content: "\263D";
+    font-weight: 900;
+    font-size: 15px;
+    color: $color-bg;
+    position: absolute;
+    top: -1px;
+    right: 5px;
+    transition: transform 0.2s ease-in-out;
+  }
+}

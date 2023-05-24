@@ -1,0 +1,46 @@
+.cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    column-gap: 20px;
+    row-gap: 30px;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+
+    &__img {
+        overflow: hidden;
+
+        img {
+            transition: transform 0.2s ease-out;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &__info {
+        padding: 10px;
+        margin-bottom: 100px;
+    }
+
+    &__info--date {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    &__footer {
+        position: absolute;
+        bottom: 10px;
+        width: calc(100% - 20px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
